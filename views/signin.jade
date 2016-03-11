@@ -1,0 +1,13 @@
+//extends layout
+//block head
+div(ng-controller='signinCtrl')
+    p Входим
+    form
+        p
+            | UserName:
+            input#widgetname(type='text', name='username', size='25', required='', ng-model='username')
+        p
+            | password:
+            input#widgetprice(type='password', name='password', size='25', required='', ng-model='password')
+        p
+            input#submit(type='submit', name='submit', value='Submit', ng-click='getAuth(username, password)')

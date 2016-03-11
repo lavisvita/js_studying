@@ -1,0 +1,23 @@
+doctype html
+html(lang='en', ng-app='chatApp')
+    head
+        title= page
+        //link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
+        //script(src='https://code.jquery.com/jquery-1.12.1.min.js')
+        script(src="/socket.io/socket.io.js")
+        script(src='/handler/chatHandler.js')
+        //script(src='/js/jquery.cookie.js')
+        script(src='/angular/angular.js')
+        script(src='/angular-route/angular-route.js')
+        script(src='/angular-cookies/angular-cookies.js')
+        script(src='/js/ngchatapp.js')
+        script(src='/js/controllers/registerController.js')
+        script(src='/js/controllers/homeController.js')
+        script(src='/js/controllers/signinController.js')
+        script(src='/js/controllers/chatController.js')
+    body(ng-controller='homeCtrl')
+        .container
+            ul.nav.nav-pills
+                li(ng-repeat='link in links')
+                    a(href='#/{{link}}') {{link}}
+            block head

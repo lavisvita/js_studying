@@ -1,0 +1,13 @@
+//extends layout
+//block head
+div(ng-controller='chatCtrl')
+    h3 welcome!
+.row
+    div.chat-messages
+        ul
+            li(ng-repeat='msg in messages')
+                span {{msg.nickName}} {{msg.text}}
+.row
+    .col-lg-4
+        input(type='text', id='message-of-field', ng-model='msg')
+        input(type='submit', value='send', id='send-message', ng-click='sendMessage(msg)')
