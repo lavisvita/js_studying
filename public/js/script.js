@@ -1,6 +1,5 @@
 'use strict';
 class Task{
-
     constructor(title = Task.getDefaultTitle()){
         this.title = title;
         this._done = false;
@@ -25,16 +24,14 @@ class Task{
         this.done = true;
         console.log(`${this.title} is done`);
     }
-
+    showTitle(){
+        console.log(`Task: ${this.title}`);
+    }
     static getDefaultTitle(){
         return 'Задача'
     }
 }
 Task.count = 0;
 
-
-let task3 = new Task();
-
-console.log(task3._done);
-task3.complete();
-console.log(task3.done, task3._done);
+let task = new Task('include babel 23423');
+task.showTitle();

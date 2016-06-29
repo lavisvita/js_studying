@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "babel public/js -d public/js/dist --presets es2015",
-    "watch": "babel public/js -d public/js/dist --presets es2015 -w"
+    "build": "babel public/js -d public/dist --presets es2015",
+    "watch": "babel public/js -d public/dist --presets es2015 -w"
   },
   "repository": {
     "type": "git",

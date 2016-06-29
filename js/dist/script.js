@@ -23,6 +23,11 @@ var Task = function () {
             console.log(this.title + ' is done');
         }
     }, {
+        key: 'showTitle',
+        value: function showTitle() {
+            console.log('Task: ' + this.title);
+        }
+    }, {
         key: 'done',
         get: function get() {
             return this._done === true ? 'Done' : 'Undone';
@@ -47,8 +52,5 @@ var Task = function () {
 
 Task.count = 0;
 
-var task3 = new Task();
-
-console.log(task3._done);
-task3.complete();
-console.log(task3.done, task3._done);
+var task = new Task('include babel 4');
+task.showTitle();
